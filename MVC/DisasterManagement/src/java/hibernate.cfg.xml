@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/drms</property>
+        <property name="hibernate.connection.username">drms</property>
+        <property name="hibernate.connection.password">drms</property>
+        <property name="hibernate.default_schema">drms</property>
+
+        <mapping class="model.MT_userlogin"/>
+        <mapping class="model.M_userroles"/>
+        <mapping class="model.M_calamity"/>
+        <mapping class="model.Exgratia_norm"/>
+        <mapping class="model.M_districts"/>
+        <mapping class="model.M_block"/>
+        <mapping class="model.Document"/>
+        <mapping class="model.M_infrastructure"/>
+        <mapping class="model.Fir"/>
+        <mapping class="model.T_Property_Damaged"/>
+        <mapping class="model.M_village"/>
+        <mapping class="model.Beneficiary"/>
+        <mapping class="model.T_exgratia_form"/>
+        <mapping class="model.M_status"/>
+        <mapping class="model.Reports"/>
+        <mapping class="model.Document_report"/>
+        <mapping class="model.Proposal"/>
+        <mapping class="model.Assistance_head"/>
+        <mapping class="model.Document_type"/>
+        <mapping class="model.Document_beneficiary"/>
+        <mapping class="model.AgendaNote"/>
+        <mapping class="model.History_forwarding"/>
+        <mapping class="model.Sequence"/>
+        <mapping class="model.T_signedpdf"/>
+        <mapping class="model.M_process"/>
+        <mapping class="model.M_processflow"/>
+    
+<!--        <mapping class="model.UserLogin"/>
+        <mapping class="model.ComplainantDetails"/>
+        <mapping class="model.Call_Log"/>
+        <mapping class="model.M_District"/>
+        <mapping class="model.M_State"/>
+        <mapping class="model.Basic_casedetails"/>
+        <mapping class="model.M_casecenter"/>
+        <mapping class="model.M_casepriority"/>
+        <mapping class="model.M_drafting"/>
+        <mapping class="model.M_natureofcase"/>
+        <mapping class="model.M_natureofcasetype"/>
+        <mapping class="model.M_reportable"/>
+        <mapping class="model.M_desk"/>
+        <mapping class="model.M_call"/>
+        <mapping class="model.M_marital_status"/>
+        <mapping class="model.LogDetails"/>
+        <mapping class="model.M_agencytype"/>
+        <mapping class="model.M_agencycentre"/>
+        <mapping class="model.M_agency"/>
+        <mapping class="model.Master_agencydetail"/>
+        <mapping class="model.Contact_agencydetail"/>
+        <mapping class="model.M_religion"/>
+        <mapping class="model.Accused_detail"/>
+        <mapping class="model.M_gender"/>
+        <mapping class="model.M_closuretype"/>
+        <mapping class="model.M_reportquestion"/>
+        <mapping class="model.Monthlyreportanswer"/>
+        <mapping class="model.Monthlyreportdetails"/>
+        <mapping class="model.Monthlyreport"/>
+        <mapping class="model.M_month"/>
+        <mapping class="model.Appointmentreq"/>
+        <mapping class="model.Quarterlyreportanswer"/>
+        <mapping class="model.M_nonintegratedagencies"/>
+        <mapping class="model.M_integratedagencies"/>
+        <mapping class="model.M_block"/>
+        <mapping class="model.M_policestation"/>
+        <mapping class="model.M_agencyassistancetype"/>
+        <mapping class="model.Assistance_provided"/>
+        <mapping class="model.M_Logtype"/>
+        <mapping class="model.M_usertype"/>
+        <mapping class="model.M_casualty"/>
+        <mapping class="model.M_calltype"/>
+        <mapping class="model.M_centre"/>
+        <mapping class="model.M_modeofcomunication"/>
+        <mapping class="model.M_closure"/>
+        <mapping class="model.Email_attachment"/>
+        <mapping class="model.Processes"/>
+        <mapping class="model.Modules"/>
+        <mapping class="model.OfficeProcess"/>
+        <mapping class="model.T_recordings"/>-->
+    
+    </session-factory>
+</hibernate-configuration>

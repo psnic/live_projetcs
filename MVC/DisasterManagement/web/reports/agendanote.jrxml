@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="agendanote" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Error">
+	<property name="ireport.zoom" value="1.2396694214876032"/>
+	<property name="ireport.x" value="5"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#E6F3FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1"/>
+	<queryString>
+		<![CDATA[SELECT * from drms.fir]]>
+	</queryString>
+	<field name="fir_no" class="java.lang.String"/>
+	<field name="calamity_id" class="java.lang.String"/>
+	<field name="blockcode" class="java.lang.Integer"/>
+	<field name="date_of_calamity_occurence" class="java.sql.Date"/>
+	<field name="time_of_calamity_occurence" class="java.sql.Time"/>
+	<field name="no_villages_affected" class="java.lang.Integer"/>
+	<field name="human_population_affected" class="java.lang.Integer"/>
+	<field name="people_dead" class="java.lang.Integer"/>
+	<field name="people_missing" class="java.lang.Integer"/>
+	<field name="people_injured" class="java.lang.Integer"/>
+	<field name="animals_dead" class="java.lang.Integer"/>
+	<field name="animals_lost" class="java.lang.Integer"/>
+	<field name="animals_affected" class="java.lang.Integer"/>
+	<field name="crop_affected" class="java.lang.String"/>
+	<field name="house_fully" class="java.lang.Integer"/>
+	<field name="house_partially" class="java.lang.Integer"/>
+	<field name="relief_measure" class="java.lang.String"/>
+	<field name="immediate_response" class="java.lang.String"/>
+	<field name="forecast" class="java.lang.String"/>
+	<field name="other_info" class="java.lang.String"/>
+	<field name="userid" class="java.lang.String"/>
+	<field name="logdate" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="148" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="24" width="555" height="23"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true" isUnderline="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[AGENDA NOTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="65" width="555" height="51"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[The Deputy Commissioner, East Khasi Hills District, Shillong has submitted a proposal for sanctioning of an amount of Rs. 400000/-  for grant of ex-gratia payment to the next of kin of the deceased who lost his/her life on account of fire incident which occurred during the year 2023 under East Khasi Hills District]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="5" width="113" height="20"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[EAST KHASI HILLS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="442" y="5" width="113" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="true" isUnderline="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[RDG23/2023]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="130" width="140" height="18"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[The details are as follows:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="385" y="130" width="170" height="18"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Date of Occurence: 23-08-2023]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="51">
+			<componentElement>
+				<reportElement key="table 6" style="table 6" isPrintRepeatedValues="false" x="-2" y="0" width="555" height="50"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Table Dataset 1">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource(1)]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="115">
+						<jr:tableHeader style="table 6_TH" height="49" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="115" height="49"/>
+								<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font pdfFontName="Helvetica-Bold"/>
+								</textElement>
+								<text><![CDATA[Name of the Block]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 6_TD" height="46" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="115" height="46"/>
+								<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true" pdfFontName="Helvetica-Bold"/>
+								</textElement>
+								<text><![CDATA[Khatarshnong Laitkroh]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70">
+						<jr:tableHeader style="table 6_TH" height="49" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="49"/>
+								<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font pdfFontName="Helvetica-Bold"/>
+								</textElement>
+								<text><![CDATA[Calamity]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 6_TD" height="46" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="46"/>
+								<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Fire Incident]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="74">
+						<jr:tableHeader style="table 6_TH" height="49" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="74" height="49"/>
+								<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font pdfFontName="Helvetica-Bold"/>
+								</textElement>
+								<text><![CDATA[No. of Villages affected]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 6_TD" height="46" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="74" height="46"/>
+								<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[1]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="65">
+						<jr:tableHeader style="table 6_TH" height="49" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="65" height="49"/>
+								<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font pdfFontName="Helvetica-Bold"/>
+								</textElement>
+								<text><![CDATA[No. of families affected]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 6_TD" height="46" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="65" height="46"/>
+								<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[1]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="65">
+						<jr:tableHeader style="table 6_TH" height="49" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="65" height="49"/>
+								<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font pdfFontName="Helvetica-Bold"/>
+								</textElement>
+								<text><![CDATA[No. of population affected]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 6_TD" height="46" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="65" height="46"/>
+								<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[8]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="57">
+						<jr:tableHeader style="table 6_TH" height="49" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="57" height="49"/>
+								<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font pdfFontName="Helvetica-Bold"/>
+								</textElement>
+								<text><![CDATA[Loss of life (in nos)]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="57" height="30"/>
+								<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true" pdfFontName="Helvetica-Bold"/>
+								</textElement>
+								<text><![CDATA[TOTAL]]></text>
+							</staticText>
+						</jr:tableFooter>
+						<jr:detailCell style="table 6_TD" height="46" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="57" height="46"/>
+								<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[1]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="109">
+						<jr:tableHeader height="49" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="109" height="49"/>
+								<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font pdfFontName="Helvetica-Bold"/>
+								</textElement>
+								<text><![CDATA[Relief Assistance Proposed in Rs.]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="109" height="30"/>
+								<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font isBold="true" pdfFontName="Helvetica-Bold"/>
+								</textElement>
+								<text><![CDATA[400000/-]]></text>
+							</staticText>
+						</jr:tableFooter>
+						<jr:detailCell height="46" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="109" height="46"/>
+								<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[400000/-]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</columnHeader>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="224">
+			<staticText>
+				<reportElement x="0" y="56" width="140" height="20"/>
+				<textElement>
+					<font size="12" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Documents Submitted:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="75" width="191" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[- Death Certificate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="94" width="191" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[- FIR/Calamity Certificate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="113" width="191" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[- Certificate certifying the next of kin ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="132" width="191" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[- Police report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="151" width="191" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[- Magesterial enquiry report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="183" width="555" height="36"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Relief Proposed is as per the items and norms of assistance from SDRF/NDRF. Hence the proposal is placed before the SEC for consideration and approving sanction.]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

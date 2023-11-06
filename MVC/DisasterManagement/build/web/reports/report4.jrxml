@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="61af1d37-efe6-4dc5-8133-7009785ec07e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 12">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 12_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 12_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 12_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 13">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 13_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 13_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 13_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 14">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 14_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 14_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 14_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 15">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 15_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 15_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 15_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 16">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 16_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 16_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 16_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="tenantFamily_list" uuid="7208953e-20b4-4756-8f74-83beb0913466">
+		<field name="name" class="java.lang.String"/>
+		<field name="age" class="java.lang.String"/>
+		<field name="relationship" class="java.lang.String"/>
+		<field name="occupation" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="landlordhelp_list" uuid="bedcb072-c8e5-4042-b278-c6f0c8119142">
+		<queryString language="SQL">
+			<![CDATA[]]>
+		</queryString>
+		<field name="name" class="java.lang.String"/>
+		<field name="age" class="java.lang.String"/>
+		<field name="address" class="java.lang.String"/>
+		<field name="filePathPhoto" class="java.lang.String"/>
+		<field name="filePathSign" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="tenanthelp_list" uuid="82104097-fd29-4727-877c-4f5dd7f1dd5c">
+		<queryString language="SQL">
+			<![CDATA[]]>
+		</queryString>
+		<field name="name" class="java.lang.String"/>
+		<field name="age" class="java.lang.String"/>
+		<field name="address" class="java.lang.String"/>
+		<field name="filePathPhoto" class="java.lang.String"/>
+		<field name="filePathSign" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="applid" class="java.lang.String"/>
+	<parameter name="json_param" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="file_path" class="java.lang.String"/>
+	<parameter name="passport_img" class="java.lang.String"/>
+	<parameter name="json_obj" class="java.lang.Object"/>
+	<parameter name="landlordName" class="java.lang.String"/>
+	<parameter name="landlordOccupation" class="java.lang.String"/>
+	<parameter name="landlordPermanentAddress" class="java.lang.String"/>
+	<parameter name="landlordMobile" class="java.lang.String"/>
+	<parameter name="landlordPresentAddress" class="java.lang.String"/>
+	<parameter name="tenantName" class="java.lang.String"/>
+	<parameter name="tenantSpouseName" class="java.lang.String"/>
+	<parameter name="tenantNationality" class="java.lang.String"/>
+	<parameter name="tenantAge" class="java.lang.String"/>
+	<parameter name="tenantPermanentAddress" class="java.lang.String"/>
+	<parameter name="tenantMobile" class="java.lang.String"/>
+	<parameter name="tenantEmail" class="java.lang.String"/>
+	<parameter name="tenantOccupation" class="java.lang.String"/>
+	<parameter name="landlordhelp_list" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="tenanthelp_list" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="tenantFamily_list" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="tenantIdproof" class="java.lang.String"/>
+	<parameter name="tenantSign" class="java.lang.String"/>
+	<parameter name="tenantPhoto" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\MRSSsystem\\MRSS-25-01-2021\\MRSS - (latest26-03-2021)\\src\\main\\resources\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="applid" class="java.lang.String"/>
+	<field name="appl_type" class="java.lang.String"/>
+	<field name="lacode" class="java.lang.String"/>
+	<field name="landlordcode" class="java.lang.String"/>
+	<field name="log_dt" class="java.sql.Timestamp"/>
+	<field name="logby" class="java.lang.String"/>
+	<field name="pscode" class="java.lang.String"/>
+	<field name="appl_status_applstatus" class="java.lang.String"/>
+	<field name="rentalunit_rentcode" class="java.lang.Integer"/>
+	<field name="tenant_id" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="99" splitType="Stretch">
+			<staticText>
+				<reportElement x="15" y="0" width="188" height="20" uuid="b397b9bb-d149-44c2-b477-8bbd170d31bc"/>
+				<textElement>
+					<font size="11"/>
+					<paragraph lineSpacing="Fixed"/>
+				</textElement>
+				<text><![CDATA[STATEMENT OF DAMAGE CUSE BY]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="188" y="-1" width="98" height="20" uuid="aa0ba9c9-0f7f-461a-8ca0-87537e6b713a"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{applid}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="286" y="-1" width="155" height="20" uuid="2a06cf4a-2622-4e7c-bbba-39039615c4f6"/>
+				<textElement>
+					<font size="11"/>
+					<paragraph lineSpacing="Fixed"/>
+				</textElement>
+				<text><![CDATA[DURING THE MONTH OF]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="441" y="0" width="113" height="20" uuid="b2729ac9-1a67-49ef-9baf-cc8438e24dc6"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{landlordName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="19" width="53" height="20" uuid="2f1dcd5f-da09-4a36-8d17-5519ddedd071"/>
+				<textElement>
+					<font size="11"/>
+					<paragraph lineSpacing="Fixed"/>
+				</textElement>
+				<text><![CDATA[UNDER]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="68" y="19" width="135" height="20" uuid="68fd0b98-a1c9-440c-85e1-d8cadcf0e477"/>
+				<textElement>
+					<font size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{landlordOccupation}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="203" y="19" width="59" height="20" uuid="ea8202f0-b677-4449-ae01-771f41957b64"/>
+				<textElement>
+					<font size="11"/>
+					<paragraph lineSpacing="Fixed"/>
+				</textElement>
+				<text><![CDATA[BLOCK]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="53" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table 16" style="table 16" mode="Transparent" x="15" y="0" width="539" height="50" uuid="2d884f98-a54a-422f-9a3a-71ae2792bd20"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" whenNoDataType="AllSectionsNoDetail">
+					<datasetRun subDataset="landlordhelp_list" uuid="f6681888-7e86-4f1f-92b4-7fa1622857e8">
+						<dataSourceExpression><![CDATA[$P{landlordhelp_list}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="125" uuid="0653e7db-6a41-4da3-aa32-b67995d63a91">
+						<jr:columnHeader style="table 16_CH" height="31" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="78" height="30" uuid="d2876ab7-3621-4a6e-b120-8540d2b821a4"/>
+								<text><![CDATA[Name of the beneficiary]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 16_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="125" height="30" uuid="8ba30686-ced6-4299-aedc-19fa503a5322"/>
+								<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="86" uuid="00fbd18f-5763-40d1-ba95-9ec0e8bc0497">
+						<jr:columnHeader style="table 16_CH" height="31" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="86" height="31" uuid="4eea5191-6334-43de-b258-93e03b6a79a5"/>
+								<text><![CDATA[Adult/Minor]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 16_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="86" height="30" uuid="a2e6a3fa-a920-4ac5-8e13-5d7e93d5d284"/>
+								<textFieldExpression><![CDATA[$F{age}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="140" uuid="6bbdaf0c-72eb-47e1-a7f2-e9b3a8bd240d">
+						<jr:columnHeader style="table 16_CH" height="31" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="138" height="31" uuid="451ed15c-2a89-4559-a1b7-184576397126"/>
+								<text><![CDATA[Address(Name of the Village)]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 16_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="138" height="30" uuid="6df24ad7-d575-4d3e-bb5c-b2d7b26a1f66"/>
+								<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="78" uuid="1b7b1a51-202d-4a44-aa95-d204229eb9b9">
+						<jr:columnHeader style="table 16_CH" height="31" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="78" height="30" uuid="a2750c89-c7c1-490f-ba05-f54affeebc54"/>
+								<text><![CDATA[Date of Occurance]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter height="30" rowSpan="1"/>
+						<jr:detailCell style="table 16_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="78" height="30" uuid="e0df0fda-b8fd-4981-9afa-9ac8d759d81d"/>
+								<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="45" uuid="819f5453-0065-4212-b558-d4cacbcf5e54">
+						<jr:columnHeader style="table_CH" height="31" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="1" width="45" height="30" uuid="935dbc84-9a51-468a-86b0-3f445a9989e3"/>
+								<text><![CDATA[Relief Measure]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter height="30" rowSpan="1"/>
+						<jr:detailCell height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="45" height="30" uuid="e85f2db0-4f2c-469f-b4ea-11003124f8dc"/>
+								<text><![CDATA[Static text]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="55" uuid="8ad143d4-82fe-4e91-af09-b2dce333d923">
+						<jr:columnHeader style="table_CH" height="31" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="55" height="30" uuid="55e6258b-d3f9-4d51-8e2b-ad2b3fbd9eb9"/>
+								<text><![CDATA[Rmarks]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="30" rowSpan="1"/>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="224" splitType="Stretch">
+			<staticText>
+				<reportElement x="28" y="151" width="147" height="20" uuid="a592f837-1966-4515-96a5-3d03cd265b07"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Total Population Affected:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="100" width="84" height="20" uuid="68946dc9-5897-48ca-a0fa-a6eca2fe5111"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Total Amount:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="175" y="151" width="100" height="20" uuid="f059fc05-34e3-4b46-a5d0-067b859eb8b8"/>
+				<textFieldExpression><![CDATA[$P{landlordMobile}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="175" y="171" width="191" height="20" uuid="4c11e935-b455-4f0c-bdd0-ea0fa0a9d467"/>
+				<textFieldExpression><![CDATA[$P{landlordPresentAddress}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="28" y="171" width="126" height="20" uuid="9e02bca6-42ff-4931-ae4b-8567618bb8a8"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Number of desease]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="204" width="126" height="20" uuid="0af19954-8c8f-4f85-82b1-52ad91ae23f4"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Number of Injured]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="124" splitType="Stretch"/>
+	</columnFooter>
+</jasperReport>

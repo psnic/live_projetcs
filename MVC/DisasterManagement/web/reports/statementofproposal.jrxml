@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="statementofproposal" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Error">
+	<property name="ireport.zoom" value="1.2396694214876032"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#E6F3FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="sop">
+		<parameter name="table_fir_no" class="java.lang.String"/>
+		<parameter name="table_dateofincidence" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[SELECT
+    v.villagename,
+    b.beneficiary_name,
+    b.age_category,
+    e.value,
+    f.remarks,
+    (
+        SELECT COUNT(*)
+        FROM drms.t_exgratia_form f_inner
+        JOIN drms.beneficiary b_inner ON f_inner.beneficiary_id = b_inner.beneficiary_id
+        WHERE f_inner.fir_no = $P{table_fir_no} AND f_inner.norm_code = '1'
+    ) AS total_deceased,
+    (
+        SELECT COUNT(*)
+        FROM drms.t_exgratia_form f_inner
+        JOIN drms.exgratia_norm e_inner ON f_inner.norm_code = e_inner.norm_code
+        WHERE f_inner.fir_no = $P{table_fir_no} AND e_inner.norm_code IN ('2', '3', '4', '5')
+    ) AS total_injured,
+    (
+        SELECT SUM(e_inner.value)
+        FROM drms.t_exgratia_form f_inner
+        JOIN drms.exgratia_norm e_inner ON f_inner.norm_code = e_inner.norm_code
+        WHERE f_inner.fir_no = $P{table_fir_no}
+    ) AS total_value
+FROM
+    drms.t_exgratia_form f
+JOIN
+    drms.beneficiary b ON f.beneficiary_id = b.beneficiary_id
+JOIN
+    drms.m_village v ON b.villagecode = v.villagecode
+JOIN
+    drms.exgratia_norm e ON f.norm_code = e.norm_code
+WHERE
+    f.fir_no = $P{table_fir_no};]]>
+		</queryString>
+		<field name="villagename" class="java.lang.String"/>
+		<field name="beneficiary_name" class="java.lang.String"/>
+		<field name="age_category" class="java.lang.String"/>
+		<field name="value" class="java.lang.Integer"/>
+		<field name="remarks" class="java.lang.String"/>
+		<field name="total_deceased" class="java.lang.Long"/>
+		<field name="total_injured" class="java.lang.Long"/>
+		<field name="total_value" class="java.lang.Long"/>
+	</subDataset>
+	<subDataset name="docs">
+		<parameter name="table_reportid" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[SELECT 'report' AS source, r.rdocumentcode AS documentcode, r.documentName, r.description, encode(r.filestored, 'base64') as doc, r.filetype
+FROM drms.document_report r
+WHERE r.reportid = $P{table_reportid}
+UNION ALL
+SELECT 'beneficiary' AS source, b.bdocumentcode AS documentcode, b.documentName, b.description, encode(b.filestored, 'base64') as doc, b.filetype
+FROM drms.document_beneficiary b
+WHERE b.beneficiary_id IN (
+    SELECT t.beneficiary_id
+    FROM drms.t_exgratia_form t
+    WHERE t.reportid = $P{table_reportid}
+)]]>
+		</queryString>
+		<field name="source" class="java.lang.String"/>
+		<field name="documentcode" class="java.lang.String"/>
+		<field name="documentname" class="java.lang.String"/>
+		<field name="description" class="java.lang.String"/>
+		<field name="doc" class="java.lang.String"/>
+		<field name="filetype" class="java.lang.String"/>
+		<group name="doc">
+			<groupExpression><![CDATA[$F{doc}]]></groupExpression>
+		</group>
+	</subDataset>
+	<parameter name="fir_no" class="java.lang.String"/>
+	<parameter name="month" class="java.lang.String"/>
+	<parameter name="dateofincidence" class="java.lang.String"/>
+	<parameter name="blockname" class="java.lang.String"/>
+	<parameter name="reportid" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+    f.fir_no,
+    c.calamity_name,
+    b.blockname
+FROM
+    drms.fir f
+JOIN
+    drms.m_calamity c ON f.calamity_id = c.calamity_id
+JOIN
+    drms.m_block b ON f.blockcode = b.blockcode
+WHERE
+    f.fir_no = $P{fir_no};]]>
+	</queryString>
+	<field name="fir_no" class="java.lang.String"/>
+	<field name="calamity_name" class="java.lang.String"/>
+	<field name="blockname" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="119" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="33"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[BDO OFFICE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="289" y="44" width="105" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[in the month of]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="186" y="44" width="103" height="20"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{calamity_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="470" y="44" width="39" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[under]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="44" width="187" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Statement of damage caused by]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="1" y="64" width="98" height="20"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{blockname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="394" y="44" width="76" height="20"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{month}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="98" y="64" width="38" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[block]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="381" y="98" width="105" height="20"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date Of Incidence:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="481" y="98" width="74" height="20"/>
+				<textElement>
+					<font size="11" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{dateofincidence}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<detail>
+		<band height="161">
+			<componentElement>
+				<reportElement key="table 4" style="table 4" stretchType="RelativeToTallestObject" x="1" y="9" width="555" height="50"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="sop">
+						<datasetParameter name="table_fir_no">
+							<datasetParameterExpression><![CDATA[$P{fir_no}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="table_dateofincidence">
+							<datasetParameterExpression><![CDATA[$P{dateofincidence}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="41">
+						<jr:columnHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="41" height="30"/>
+								<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font isBold="true" pdfFontName="Helvetica-Bold"/>
+								</textElement>
+								<text><![CDATA[Sl. No.]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="30" rowSpan="1">
+							<textField>
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="41" height="30"/>
+								<box leftPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement verticalAlignment="Middle"/>
+								<textFieldExpression class="java.lang.Integer"><![CDATA[$V{COLUMN_COUNT}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90">
+						<jr:tableFooter height="30" rowSpan="1">
+							<textField>
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="90" height="30"/>
+								<box leftPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement verticalAlignment="Middle"/>
+								<textFieldExpression class="java.lang.String"><![CDATA["Total Deceased="+$F{total_deceased}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30"/>
+								<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font isBold="true" pdfFontName="Helvetica-Bold"/>
+								</textElement>
+								<text><![CDATA[Village]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 4_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="90" height="30"/>
+								<box leftPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement verticalAlignment="Middle"/>
+								<textFieldExpression class="java.lang.String"><![CDATA[$F{villagename}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="101">
+						<jr:tableFooter height="30" rowSpan="1">
+							<textField>
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="101" height="30"/>
+								<box leftPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement verticalAlignment="Middle"/>
+								<textFieldExpression class="java.lang.String"><![CDATA["Total Injured="+$F{total_injured}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="101" height="30"/>
+								<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font isBold="true" pdfFontName="Helvetica-Bold"/>
+								</textElement>
+								<text><![CDATA[Beneficiary Name]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 4_TD" height="30" rowSpan="1">
+							<textField>
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="101" height="30"/>
+								<box leftPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement verticalAlignment="Middle"/>
+								<textFieldExpression class="java.lang.String"><![CDATA[$F{beneficiary_name}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="67">
+						<jr:columnHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="67" height="30"/>
+								<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font isBold="true" pdfFontName="Helvetica-Bold"/>
+								</textElement>
+								<text><![CDATA[Adult/Minor]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="30" rowSpan="1">
+							<textField>
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="67" height="30"/>
+								<box leftPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement verticalAlignment="Middle"/>
+								<textFieldExpression class="java.lang.String"><![CDATA[$F{age_category}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="100">
+						<jr:tableFooter height="30" rowSpan="1">
+							<textField>
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="100" height="30"/>
+								<box leftPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement verticalAlignment="Middle"/>
+								<textFieldExpression class="java.lang.String"><![CDATA["Total amount= "+$F{total_value}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
+						<jr:columnHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="30"/>
+								<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font isBold="true" pdfFontName="Helvetica-Bold"/>
+								</textElement>
+								<text><![CDATA[Amount]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="30" rowSpan="1">
+							<textField>
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="100" height="30"/>
+								<box leftPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement verticalAlignment="Middle"/>
+								<textFieldExpression class="java.lang.String"><![CDATA[$F{value}.toString()]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="157">
+						<jr:columnHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="157" height="30"/>
+								<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement verticalAlignment="Middle">
+									<font isBold="true" pdfFontName="Helvetica-Bold"/>
+								</textElement>
+								<text><![CDATA[Remarks]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell height="30" rowSpan="1">
+							<textField isStretchWithOverflow="true">
+								<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="157" height="30"/>
+								<box topPadding="5" leftPadding="5" bottomPadding="5" rightPadding="5">
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement verticalAlignment="Middle"/>
+								<textFieldExpression class="java.lang.String"><![CDATA[$F{remarks}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement positionType="Float" x="415" y="113" width="135" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Block Development Officer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="455" y="94" width="50" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[S.D]]></text>
+			</staticText>
+			<break>
+				<reportElement x="0" y="153" width="549" height="1"/>
+			</break>
+		</band>
+		<band height="297">
+			<componentElement>
+				<reportElement key="table 5" style="table 5" x="1" y="0" width="555" height="297"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="docs">
+						<datasetParameter name="table_reportid">
+							<datasetParameterExpression><![CDATA[$P{reportid}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="555">
+						<jr:detailCell height="295" rowSpan="1">
+							<image scaleImage="RealSize">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="555" height="295" isPrintWhenDetailOverflows="true"/>
+								<imageExpression class="java.io.InputStream"><![CDATA[new java.io.ByteArrayInputStream(org.apache.commons.codec.binary.Base64.decodeBase64($F{doc}.getBytes()))]]></imageExpression>
+							</image>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
